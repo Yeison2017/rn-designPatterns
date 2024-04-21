@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 
 interface Props {
-  name: string;
+  name: string | number;
 }
 
 const Paragraph = ({ name }: Props) => {

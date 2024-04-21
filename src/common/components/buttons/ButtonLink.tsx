@@ -18,13 +18,16 @@ export default ButtonLink;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.green500,
+    // backgroundColor: colors.white,
+    backgroundColor: colors.green100,
+    borderWidth: 1,
+    borderColor: colors.blueGray400,
     padding: 8,
     borderRadius: 8,
     alignItems: "center",
   },
   text: {
     fontSize: 18,
-    color: colors.white,
+    color: colors.green700,
   },
 });
