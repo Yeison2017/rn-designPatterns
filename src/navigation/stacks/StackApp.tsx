@@ -9,7 +9,13 @@ const Stack = createNativeStackNavigator<RootStackAppParams>();
 
 const StackApp = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        contentStyle: {
+          backgroundColor: "#fff",
+        },
+      }}
+    >
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Singleton" component={SingletonScreen} />
     </Stack.Navigator>

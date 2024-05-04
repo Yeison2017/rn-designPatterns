@@ -1,4 +1,4 @@
-import { colors } from "@/common/styles";
+import { colors, fontFamily } from "@/common/styles";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 interface Props {
@@ -29,5 +29,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     color: colors.green700,
+    fontFamily: fontFamily.textRegular,
   },
 });
