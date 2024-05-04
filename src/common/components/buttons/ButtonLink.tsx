@@ -1,5 +1,5 @@
 import { colors, fontFamily } from "@/common/styles";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 interface Props {
   onPress?: () => void;
@@ -9,7 +9,10 @@ interface Props {
 const ButtonLink = ({ name, onPress }: Props) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Text style={styles.text}>{name}</Text>
+      <View style={styles.body}>
+        <Text style={styles.text}>{name}</Text>
+        <Text style={styles.text}>{">"}</Text>
+      </View>
     </TouchableOpacity>
   );
 };
@@ -18,13 +21,16 @@ export default ButtonLink;
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: colors.white,
-    backgroundColor: colors.green100,
-    borderWidth: 1,
+    backgroundColor: colors.white,
+    // borderWidth: 1,
     borderColor: colors.blueGray400,
     padding: 8,
     borderRadius: 8,
-    alignItems: "center",
+    // alignItems: "center",
+  },
+  body: {
+    justifyContent: "space-between",
+    flexDirection: "row",
   },
   text: {
     fontSize: 18,

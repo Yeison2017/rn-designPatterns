@@ -1,13 +1,14 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleProp, StyleSheet, Text, TextStyle } from "react-native";
 
 import { colors, fontFamily } from "@/common/styles";
 
 interface Props {
   name: string;
+  style?: StyleProp<TextStyle>;
 }
 
-const Title = ({ name }: Props) => {
-  return <Text style={styles.text}>{name}</Text>;
+const Title = ({ name, style }: Props) => {
+  return <Text style={[styles.text, style]}>{name}</Text>;
 };
 
 export default Title;
