@@ -1,8 +1,8 @@
 import { StrategyAuth } from "./strategyAuth.interface";
 
-export class LoginDBStrategy implements StrategyAuth {
+export class LoginServiceStrategy implements StrategyAuth {
   login(user: string, password: string): boolean {
-    if (user === "adminDB" && password === "123") {
+    if (user === "adminService" && password === "123") {
       return true;
     }
 

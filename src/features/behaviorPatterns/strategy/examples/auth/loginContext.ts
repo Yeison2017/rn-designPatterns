@@ -2,14 +2,13 @@
 // Context
 // ConcreteStrategyA
 // ConcreteStrategyA1
-
 import { StrategyAuth } from "./strategyAuth.interface";
 
 export class LoginContext {
-  private strategy: StrategyAuth | any;
+  private strategy: StrategyAuth;
 
   constructor(strategy: StrategyAuth) {
-    this.setStrategy(strategy);
+    this.strategy = strategy;
   }
 
   setStrategy(strategy: StrategyAuth) {
