@@ -1,1 +1,2 @@
-export * from "./dataExample.Interface";
+export * from "./example.interface";
+export * from "./patterns.interface";

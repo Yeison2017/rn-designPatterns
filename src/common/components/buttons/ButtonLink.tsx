@@ -1,5 +1,6 @@
-import { colors, fontFamily } from "@/common/styles";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
+import { colors, fontFamily } from "@/common/styles";
 
 interface Props {
   onPress?: () => void;
@@ -22,11 +23,9 @@ export default ButtonLink;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    // borderWidth: 1,
     borderColor: colors.blueGray400,
     padding: 8,
     borderRadius: 8,
-    // alignItems: "center",
   },
   body: {
     justifyContent: "space-between",

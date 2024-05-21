@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { ButtonLink, Title } from "@/common/components";
+import { ButtonLink, HeaderTitle, Title } from "@/common/components";
 import { StackAppProps } from "@/navigation/interfaces";
 import { fontFamily } from "@/common/styles";
 
@@ -12,14 +12,17 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <Title name="Patrones de diseño" style={styles.title} />
       <View style={styles.containerPatterns}>
-        <Title name="Patrones creacionales" />
+        <HeaderTitle
+          name="Patrones creacionales"
+          onPress={() => navegation.navigate("CreationalPatterns")}
+        />
         <ButtonLink
           name="Singleton"
           onPress={() => navegation.navigate("Singleton")}
         />
       </View>
       <View style={styles.containerPatterns}>
-        <Title name="Patrones de comportamiento" />
+        <HeaderTitle name="Patrones de comportamiento" onPress={() => {}} />
         <ButtonLink
           name="Strategy"
           onPress={() => navegation.navigate("Strategy")}
