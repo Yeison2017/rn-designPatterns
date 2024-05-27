@@ -15,8 +15,8 @@ import { TypeDesignPattern } from "@/features/typeDesignPattern/controllers";
 
 class DesignPatternsController {
   creationalPatterns = new CreationalPatterns();
-  behaviorPatterns = new BehaviorPatterns();
   structuralPatterns = new StructuralPatterns();
+  behaviorPatterns = new BehaviorPatterns();
 
   constructor() {}
 

@@ -7,6 +7,7 @@ import {
   ImageSourcePropType,
   TouchableOpacity,
 } from "react-native";
+import { Icon } from "../icons";
 
 export interface Props {
   title: string;
@@ -25,32 +26,20 @@ const InfoCard = ({
 }: Props) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles().card}>
-      <View style={{}}>
+      <View style={{ flex: 1 }}>
         <View style={styles().header}>
           <View style={styles().iconContainer}>
-            {typeof image === "string" ? (
-              <Image
-                source={{ uri: image }}
-                style={styles(imageProportion).image}
-                resizeMode="contain"
-              />
-            ) : (
-              <Image
-                source={image}
-                style={styles(imageProportion).image}
-                resizeMode="contain"
-              />
-            )}
-            {/* <Image
-               source={image}
-               style={styles(imageProportion).image}
-               resizeMode="contain"
-             /> */}
+            <Image
+              source={typeof image === "string" ? { uri: image } : image}
+              style={styles(imageProportion).image}
+              resizeMode="contain"
+            />
           </View>
           <Text style={styles().title}>{title}</Text>
         </View>
         {description && <Text style={styles().description}>{description}</Text>}
       </View>
+      <Icon name="arrow-right" />
     </TouchableOpacity>
   );
 };
@@ -67,6 +56,9 @@ const styles = (imageProportion?: number) =>
       shadowOffset: { width: 0, height: 2 },
       shadowRadius: 8,
       elevation: 4,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
     },
     header: {
       flexDirection: "row",

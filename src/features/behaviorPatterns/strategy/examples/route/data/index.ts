@@ -1,1 +1,1 @@
-export { default as dataBookStrategy } from "./dataBookStrategy";
+export { default as dataRouteStrategy } from "./dataRouteStrategy";

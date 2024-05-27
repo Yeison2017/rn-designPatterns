@@ -57,7 +57,8 @@ export const DESCRIPTION_DESIGN_PATTERNS: Record<
   keyof typeof DESIGN_PATTERNS,
   string
 > = {
-  strategy: "",
+  strategy:
+    "Permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.",
   adapter: "",
   bridge: "",
   composite: "",

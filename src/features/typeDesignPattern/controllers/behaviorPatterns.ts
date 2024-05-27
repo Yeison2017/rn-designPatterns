@@ -20,9 +20,9 @@ class BehaviorPatterns implements TypeDesignPattern {
   getDesignPatterns(): DesignPattern[] {
     const designPatterns: DesignPattern[] = [
       {
-        name: DESIGN_PATTERNS.singleton,
-        description: DESCRIPTION_DESIGN_PATTERNS.singleton,
-        image: IMAGE.singleton,
+        name: DESIGN_PATTERNS.strategy,
+        description: DESCRIPTION_DESIGN_PATTERNS.strategy,
+        image: IMAGE.strategy,
       },
     ];
     return designPatterns;

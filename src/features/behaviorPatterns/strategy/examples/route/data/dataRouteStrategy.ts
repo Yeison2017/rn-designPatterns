@@ -1,4 +1,4 @@
-class DataBookStrategy {
+class DataRouteStrategy {
   descripcion: string;
 
   constructor() {
@@ -7,4 +7,4 @@ class DataBookStrategy {
   }
 }
 
-export default DataBookStrategy;
+export default DataRouteStrategy;

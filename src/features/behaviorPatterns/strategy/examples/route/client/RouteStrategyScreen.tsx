@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StyleSheet } from "react-native";
 
 import { Paragraph, ScreenLayout, Title } from "@/common/components";
 import { NavigatorContext } from "../navigatorContext";
-import DataBookStrategy from "../data/dataBookStrategy";
 import { PointRoute } from "./components";
 import { Input } from "@/common/components/inputs";
 import { Picker } from "@/common/components/pickers";
 import { RoadStrategy } from "../roadStrategy";
 import { WalkingStrategy } from "../walkingStrategy";
 import { PublicTransportStrategy } from "../publicTransportStrategy";
+import DataRouteStrategy from "../data/dataRouteStrategy";
 
 const items = [
   { label: "En automóvil", value: "road" },
@@ -24,7 +24,7 @@ const RouteStrategyScreen = () => {
   const [descriptionRoute, setDescriptionRoute] = useState("");
 
   const navigator = new NavigatorContext();
-  const data = new DataBookStrategy();
+  const data = new DataRouteStrategy();
 
   const onChangeTransport = () => {
     const route = navigator.buildRoute(textOrigen, textDestination);
@@ -37,35 +37,35 @@ const RouteStrategyScreen = () => {
     switch (itemValue) {
       case "road":
         navigator.setRouteStrategy(new RoadStrategy());
-        onChangeTransport();
         break;
       case "walking":
         navigator.setRouteStrategy(new WalkingStrategy());
-        onChangeTransport();
         break;
       case "publicTransport":
         navigator.setRouteStrategy(new PublicTransportStrategy());
-        onChangeTransport();
         break;
       default:
         break;
     }
+    onChangeTransport();
   };
 
   const onTextOrigen = (text: string) => {
     setTextOrigen(text);
-    onSelectedValue(selectedValue);
   };
 
   const onTextDestination = (text: string) => {
     setTextDestination(text);
-    onSelectedValue(selectedValue);
   };
+
+  useEffect(() => {
+    onSelectedValue(selectedValue);
+  }, [textOrigen, textDestination]);
 
   return (
     <ScreenLayout>
-      {/* <Title name="Descripción" />
-      <Paragraph name={data.descripcion} /> */}
+      <Title name="Descripción" />
+      <Paragraph name={data.descripcion} />
       <Title name="Ejemplo:" />
       <Picker
         title="Medio de transporte:"
