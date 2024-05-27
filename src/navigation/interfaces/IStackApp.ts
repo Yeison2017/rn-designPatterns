@@ -1,12 +1,13 @@
-import { TypeDesignPattern } from "@/common/interfaces";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+import { TypeDesignPattern } from "@/features/typeDesignPattern/controllers";
 
 export type RootStackAppParams = {
   Home: undefined;
-  TypeDesignPattern: TypeDesignPattern;
+  TypeDesignPattern?: TypeDesignPattern;
   Singleton: undefined;
   Strategy: undefined;
-  BookStrategy: undefined;
+  RouteStrategy: undefined;
 };
 
 export type StackAppProps = NativeStackNavigationProp<RootStackAppParams>;

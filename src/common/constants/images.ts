@@ -39,3 +39,7 @@ export const IMAGE: { [key in PatternKeys]: ImageSourcePropType } = {
   // templateMethod: require("../../../assets/images/templateMethod.png"),
   // visitor: require("../../../assets/images/visitor.png"),
 };
+
+export const IMAGE_EXAMPLE = {
+  routeStrategy: "https://cdn-icons-png.flaticon.com/128/9245/9245193.png",
+};

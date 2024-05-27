@@ -11,7 +11,7 @@ import {
 export interface Props {
   title: string;
   description?: string;
-  image: ImageSourcePropType;
+  image: ImageSourcePropType | string;
   imageProportion?: number;
   onPress?: () => void;
 }
@@ -28,11 +28,24 @@ const InfoCard = ({
       <View style={{}}>
         <View style={styles().header}>
           <View style={styles().iconContainer}>
-            <Image
-              source={image}
-              style={styles(imageProportion).image}
-              resizeMode="contain"
-            />
+            {typeof image === "string" ? (
+              <Image
+                source={{ uri: image }}
+                style={styles(imageProportion).image}
+                resizeMode="contain"
+              />
+            ) : (
+              <Image
+                source={image}
+                style={styles(imageProportion).image}
+                resizeMode="contain"
+              />
+            )}
+            {/* <Image
+               source={image}
+               style={styles(imageProportion).image}
+               resizeMode="contain"
+             /> */}
           </View>
           <Text style={styles().title}>{title}</Text>
         </View>

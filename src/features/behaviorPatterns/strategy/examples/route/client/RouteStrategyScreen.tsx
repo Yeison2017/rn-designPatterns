@@ -17,7 +17,7 @@ const items = [
   { label: "Transporte público", value: "publicTransport" },
 ];
 
-const BookStrategyScreen = () => {
+const RouteStrategyScreen = () => {
   const [selectedValue, setSelectedValue] = useState("");
   const [textOrigen, setTextOrigen] = useState("");
   const [textDestination, setTextDestination] = useState("");
@@ -90,6 +90,6 @@ const BookStrategyScreen = () => {
   );
 };
 
-export default BookStrategyScreen;
+export default RouteStrategyScreen;
 
 const styles = StyleSheet.create({});

@@ -1,17 +1,14 @@
 import { StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import {
-  ButtonLink,
-  Paragraph,
-  ScreenLayout,
-  Title,
-} from "@/common/components";
+import { Paragraph, ScreenLayout, Title } from "@/common/components";
 import { LoginContext } from "../examples/auth/loginContext";
 import { LoginDBStrategy } from "../examples/auth/loginDBStrategy";
 import { LoginGoogleStrategy } from "../examples/auth/loginGoogleStrategy";
 import { LoginServiceStrategy } from "../examples/auth/loginServiceStrategy";
 import { StackAppProps } from "@/navigation/interfaces";
+import { InfoCard } from "@/common/components/cards";
+import { IMAGE_EXAMPLE } from "@/common/constants";
 
 const StrategyScreen = () => {
   const navegation = useNavigation<StackAppProps>();
@@ -28,16 +25,18 @@ const StrategyScreen = () => {
   return (
     <ScreenLayout>
       <Title name="Ejemplos:" />
-      <Title name="Auth" />
+      {/* <Title name="Auth" />
       <Title name="1. Auth" />
       <Paragraph name={responseAuthDB ? "True" : "False"} />
       <Title name="2. Auth Service" />
       <Paragraph name={responseAuthService ? "True" : "False"} />
       <Title name="3. Auth Google" />
-      <Paragraph name={responseAuthGoogle ? "True" : "False"} />
-      <ButtonLink
-        name="Book"
-        onPress={() => navegation.navigate("BookStrategy")}
+      <Paragraph name={responseAuthGoogle ? "True" : "False"} /> */}
+      <InfoCard
+        title="Route"
+        image={IMAGE_EXAMPLE.routeStrategy}
+        onPress={() => navegation.navigate("RouteStrategy")}
+        imageProportion={0.2}
       />
     </ScreenLayout>
   );

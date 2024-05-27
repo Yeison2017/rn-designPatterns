@@ -1,6 +1,4 @@
-import { DataExample } from "@/common/interfaces";
-
-class DataBookStrategy implements DataExample {
+class DataBookStrategy {
   descripcion: string;
 
   constructor() {
