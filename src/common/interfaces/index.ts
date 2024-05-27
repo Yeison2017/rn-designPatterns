@@ -1,2 +1,3 @@
 export * from "./example.interface";
-export * from "./patterns.interface";
+export * from "./typeDesignPattern.interface";
+export * from "./typesDesignPatterns.interface";

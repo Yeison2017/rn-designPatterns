@@ -1,12 +1,11 @@
 import { ImageSourcePropType } from "react-native";
 
-export interface Patterns {
-  title: string;
-  description: string;
-  patterns: Pattern[];
-}
+// export interface TypeDesignPattern {
+//   title: string;
+//   description: string;
+// }
 
-export interface Pattern {
+export interface DesignPattern {
   name: string;
   description: string;
   image: ImageSourcePropType;

@@ -6,7 +6,7 @@ import { SingletonScreen } from "@/features/creationalPatterns/patterns/singleto
 import { StrategyScreen } from "@/features/behaviorPatterns/strategy/screens";
 import { BookStrategyScreen } from "@/features/behaviorPatterns/strategy/examples/book/client";
 import { RootStackAppParams } from "../interfaces";
-import { CreationalPatternsScreen } from "@/features/creationalPatterns/screens";
+import { TypeDesignPatternScreen } from "@/features/typeDesignPattern/screens";
 
 const Stack = createNativeStackNavigator<RootStackAppParams>();
 
@@ -21,8 +21,8 @@ const StackApp = () => {
     >
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen
-        name="CreationalPatterns"
-        component={CreationalPatternsScreen}
+        name="TypeDesignPattern"
+        component={TypeDesignPatternScreen}
       />
       <Stack.Screen name="Singleton" component={SingletonScreen} />
       <Stack.Screen name="Strategy" component={StrategyScreen} />
