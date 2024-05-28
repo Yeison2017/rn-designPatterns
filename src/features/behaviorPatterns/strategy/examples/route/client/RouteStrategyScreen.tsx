@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { StyleSheet } from "react-native";
 
-import { Paragraph, ScreenLayout, Title } from "@/common/components";
+import { Paragraph, ScreenLayout } from "@/common/components";
 import { NavigatorContext } from "../navigatorContext";
 import { PointRoute } from "./components";
 import { Input } from "@/common/components/inputs";
@@ -10,6 +10,7 @@ import { RoadStrategy } from "../roadStrategy";
 import { WalkingStrategy } from "../walkingStrategy";
 import { PublicTransportStrategy } from "../publicTransportStrategy";
 import DataRouteStrategy from "../data/dataRouteStrategy";
+import { TitleAccordion } from "@/common/components/accordion";
 
 const items = [
   { label: "En automóvil", value: "road" },
@@ -64,28 +65,31 @@ const RouteStrategyScreen = () => {
 
   return (
     <ScreenLayout>
-      <Title name="Descripción" />
-      <Paragraph name={data.descripcion} />
-      <Title name="Ejemplo:" />
-      <Picker
-        title="Medio de transporte:"
-        items={items}
-        selectedValue={selectedValue}
-        onValueChange={onSelectedValue}
-      />
+      <TitleAccordion name="Descripción">
+        <Paragraph name={data.descripcion} />
+      </TitleAccordion>
 
-      <Input title="Origen:" onChangeText={onTextOrigen} value={textOrigen} />
-      <Input
-        title="Destino:"
-        onChangeText={onTextDestination}
-        value={textDestination}
-      />
+      <TitleAccordion name="Ejemplo:">
+        <Picker
+          title="Medio de transporte:"
+          items={items}
+          selectedValue={selectedValue}
+          onValueChange={onSelectedValue}
+        />
 
-      <PointRoute
-        nameOrigen={textOrigen}
-        nameDestination={textDestination}
-        descriptionRoute={descriptionRoute}
-      />
+        <Input title="Origen:" onChangeText={onTextOrigen} value={textOrigen} />
+        <Input
+          title="Destino:"
+          onChangeText={onTextDestination}
+          value={textDestination}
+        />
+
+        <PointRoute
+          nameOrigen={textOrigen}
+          nameDestination={textDestination}
+          descriptionRoute={descriptionRoute}
+        />
+      </TitleAccordion>
     </ScreenLayout>
   );
 };

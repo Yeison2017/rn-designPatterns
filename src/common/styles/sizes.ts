@@ -13,3 +13,19 @@ export const borderRadius: Sizes = {
   lg: 16,
   xl: 32,
 };
+
+export const fontSize: Sizes = {
+  xs: 10,
+  sm: 12,
+  md: 14,
+  lg: 16,
+  xl: 18,
+};
+
+export const sizeIcon: Sizes = {
+  xs: 20,
+  sm: 24,
+  md: 28,
+  lg: 32,
+  xl: 36,
+};

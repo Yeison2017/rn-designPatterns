@@ -1,4 +1,4 @@
-import { borderRadius } from "@/common/styles";
+import { borderRadius, fontSize } from "@/common/styles";
 import {
   View,
   Text,
@@ -26,7 +26,7 @@ const InfoCard = ({
 }: Props) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles().card}>
-      <View style={{ flex: 1 }}>
+      <View style={styles().container}>
         <View style={styles().header}>
           <View style={styles().iconContainer}>
             <Image
@@ -60,6 +60,9 @@ const styles = (imageProportion?: number) =>
       justifyContent: "space-between",
       alignItems: "center",
     },
+    container: {
+      flex: 1,
+    },
     header: {
       flexDirection: "row",
       alignItems: "center",
@@ -68,12 +71,12 @@ const styles = (imageProportion?: number) =>
       marginRight: 16,
     },
     title: {
-      fontSize: 18,
-      fontWeight: "bold",
+      fontSize: fontSize.lg,
     },
     description: {
-      fontSize: 14,
+      fontSize: fontSize.md,
       color: "#666",
+      marginTop: 8,
     },
     image: {
       width: imageProportion ? 280 * imageProportion : 280,

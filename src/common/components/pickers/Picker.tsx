@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { borderRadius, colors } from "@/common/styles";
+import { borderRadius, colors, fontFamily, fontSize } from "@/common/styles";
 import {
   View,
   Text,
@@ -9,6 +9,8 @@ import {
   StyleSheet,
 } from "react-native";
 
+import { Divider } from "../divider";
+
 interface Props {
   title?: string;
   items: { label: string; value: string }[];
@@ -16,12 +18,7 @@ interface Props {
   onValueChange: (itemValue: string) => void;
 }
 
-const Picker: React.FC<Props> = ({
-  title,
-  items,
-  selectedValue,
-  onValueChange,
-}) => {
+const Picker = ({ title, items, selectedValue, onValueChange }: Props) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleSelectItem = (itemValue: string) => {
@@ -50,6 +47,8 @@ const Picker: React.FC<Props> = ({
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalContainer}>
+            <Text style={styles.titleModal}>{title}</Text>
+            <Divider style={{ marginBottom: 8 }} />
             <FlatList
               data={items}
               keyExtractor={(item) => item.value}
@@ -74,7 +73,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   label: {
-    fontSize: 18,
+    fontSize: fontSize.xl,
     marginBottom: 8,
   },
   input: {
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   inputText: {
-    fontSize: 16,
+    fontSize: fontSize.lg,
   },
   modalOverlay: {
     flex: 1,
@@ -97,14 +96,20 @@ const styles = StyleSheet.create({
   modalContainer: {
     width: "80%",
     backgroundColor: "white",
-    borderRadius: 8,
+    borderRadius: borderRadius.sm,
     padding: 16,
+  },
+  titleModal: {
+    fontFamily: fontFamily.textRegular,
+    color: colors.textDark700,
+    fontSize: fontSize.xl,
+    marginBottom: 8,
   },
   modalItem: {
     paddingVertical: 12,
   },
   modalItemText: {
-    fontSize: 16,
+    fontSize: fontSize.lg,
   },
 });
 

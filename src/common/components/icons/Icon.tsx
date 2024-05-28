@@ -3,7 +3,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 import { colors } from "@/common/styles";
 
-type nameIcons = "arrow-right" | "arrow-left";
+type nameIcons = "arrow-right" | "arrow-left" | "arrow-down" | "arrow-up";
 
 interface Props {
   name: nameIcons;
@@ -32,6 +32,24 @@ const Icon = ({
       return (
         <MaterialIcons
           name="keyboard-arrow-left"
+          size={size}
+          color={color}
+          {...props}
+        />
+      );
+    case "arrow-down":
+      return (
+        <MaterialIcons
+          name="keyboard-arrow-down"
+          size={size}
+          color={color}
+          {...props}
+        />
+      );
+    case "arrow-up":
+      return (
+        <MaterialIcons
+          name="keyboard-arrow-up"
           size={size}
           color={color}
           {...props}
