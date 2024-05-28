@@ -14,10 +14,10 @@ const TitleAccordion = ({ children, ...props }: Props) => {
   const [showChildren, setShowChildren] = useState<boolean>(true);
 
   return (
-    <View>
+    <View style={styles.container}>
       <TouchableOpacity
         onPress={() => setShowChildren(!showChildren)}
-        style={styles.container}
+        style={styles.touchableOpacity}
       >
         <Title {...props} />
         <Icon
@@ -34,6 +34,9 @@ export default TitleAccordion;
 
 const styles = StyleSheet.create({
   container: {
+    marginBottom: 8,
+  },
+  touchableOpacity: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",

@@ -11,6 +11,8 @@ import { WalkingStrategy } from "../walkingStrategy";
 import { PublicTransportStrategy } from "../publicTransportStrategy";
 import DataRouteStrategy from "../data/dataRouteStrategy";
 import { TitleAccordion } from "@/common/components/accordion";
+import { CodeSyntax } from "@/common/components/codeSyntax";
+import { CODE_ROUTE_STRATEGY } from "@/data/code";
 
 const items = [
   { label: "En automóvil", value: "road" },
@@ -64,7 +66,7 @@ const RouteStrategyScreen = () => {
   }, [textOrigen, textDestination]);
 
   return (
-    <ScreenLayout>
+    <ScreenLayout activateScrollView={true}>
       <TitleAccordion name="Descripción">
         <Paragraph name={data.descripcion} />
       </TitleAccordion>
@@ -89,6 +91,10 @@ const RouteStrategyScreen = () => {
           nameDestination={textDestination}
           descriptionRoute={descriptionRoute}
         />
+      </TitleAccordion>
+
+      <TitleAccordion name="Código">
+        <CodeSyntax code={CODE_ROUTE_STRATEGY} />
       </TitleAccordion>
     </ScreenLayout>
   );
