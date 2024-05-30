@@ -1,22 +1,23 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleProp, StyleSheet, Text, TextStyle } from "react-native";
 
-import { colors, fontFamily } from "@/common/styles";
+import { colors, fontFamily, fontSize } from "@/common/styles";
 
-interface Props {
+export interface TitleProps {
   name: string;
+  style?: StyleProp<TextStyle>;
 }
 
-const Title = ({ name }: Props) => {
-  return <Text style={styles.text}>{name}</Text>;
+const Title = ({ name, style }: TitleProps) => {
+  return <Text style={[styles.text, style]}>{name}</Text>;
 };
 
 export default Title;
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 20,
+    fontSize: fontSize.xl,
     marginBottom: 8,
     color: colors.textDark700,
-    fontFamily: fontFamily.textRegular,
+    fontFamily: fontFamily.textBold,
   },
 });
