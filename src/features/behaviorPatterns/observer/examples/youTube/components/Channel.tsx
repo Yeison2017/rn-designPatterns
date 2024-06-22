@@ -95,6 +95,8 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+    gap: 8,
+    marginBottom: 8,
   },
   containerSubscribers: {
     marginBottom: 8,
