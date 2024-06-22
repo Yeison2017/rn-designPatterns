@@ -13,13 +13,13 @@ export const CREATIONAL_PATTERNS = {
 };
 
 export const STRUCTURAL_PATTERNS = {
-  adapter: "Adapter",
-  bridge: "Bridge",
-  composite: "Composite",
-  decorator: "Decorator",
-  facade: "Facade",
-  flyweight: "Flyweight",
-  proxy: "Proxy",
+  // adapter: "Adapter",
+  // bridge: "Bridge",
+  // composite: "Composite",
+  // decorator: "Decorator",
+  // facade: "Facade",
+  // flyweight: "Flyweight",
+  // proxy: "Proxy",
 };
 
 export const BEHAVIOR_PATTERNS = {
@@ -28,7 +28,7 @@ export const BEHAVIOR_PATTERNS = {
   // iterator: "Iterator",
   // mediator: "Mediator",
   // memento: "Memento",
-  // observer: "Observer",
+  observer: "Observer",
   // state: "State",
   strategy: "Strategy",
   // templateMethod: "Template Method",
@@ -57,15 +57,34 @@ export const DESCRIPTION_DESIGN_PATTERNS: Record<
   keyof typeof DESIGN_PATTERNS,
   string
 > = {
-  strategy:
-    "Permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.",
-  adapter: "",
-  bridge: "",
-  composite: "",
-  decorator: "",
-  facade: "",
-  flyweight: "",
-  proxy: "",
+  // Creational patterns
+  // factoryMethod: "",
+  // abstractFactory: "",
+  // builder: "",
+  // prototype: "",
   singleton:
     "Permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.",
+
+  // Structural patterns
+  // adapter: "",
+  // bridge: "",
+  // composite: "",
+  // decorator: "",
+  // facade: "",
+  // flyweight: "",
+  // proxy: "",
+
+  // Behavior patterns
+  // chainOfResponsibility: "",
+  // command: "",
+  // iterator: "",
+  // mediator: "",
+  // memento: "",
+  observer:
+    "Permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.",
+  // state: "",
+  strategy:
+    "Permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.",
+  // templateMethod: "",
+  // visitor: "",
 };

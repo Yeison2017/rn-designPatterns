@@ -7,6 +7,8 @@ import { StrategyScreen } from "@/features/behaviorPatterns/strategy/screens";
 import { TypeDesignPatternScreen } from "@/features/typeDesignPattern/screens";
 import { RouteStrategyScreen } from "@/features/behaviorPatterns/strategy/examples/route/client";
 import { RootStackAppParams } from "../interfaces";
+import { ObserverScreen } from "@/features/behaviorPatterns/observer/screens";
+import { YouTubeObserverScreen } from "@/features/behaviorPatterns/observer/examples/youTube/client";
 
 const Stack = createNativeStackNavigator<RootStackAppParams>();
 
@@ -24,9 +26,23 @@ const StackApp = () => {
         name="TypeDesignPattern"
         component={TypeDesignPatternScreen}
       />
+      {/* Creational patterns */}
       <Stack.Screen name="Singleton" component={SingletonScreen} />
+
+      {/* Structural patterns */}
+
+      {/* Behavior patterns */}
+      <Stack.Screen name="Observer" component={ObserverScreen} />
       <Stack.Screen name="Strategy" component={StrategyScreen} />
+
+      {/* ---------------------- EXAMPLES ---------------------- */}
+
+      {/* -------- Behavior patterns -------- */}
+      {/* Strategy */}
       <Stack.Screen name="RouteStrategy" component={RouteStrategyScreen} />
+
+      {/* Observer */}
+      <Stack.Screen name="YouTubeObserver" component={YouTubeObserverScreen} />
     </Stack.Navigator>
   );
 };

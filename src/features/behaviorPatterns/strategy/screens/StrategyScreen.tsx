@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { Paragraph, ScreenLayout, Title } from "@/common/components";
+import { Paragraph, ScreenLayout } from "@/common/components";
 import { LoginContext } from "../examples/auth/loginContext";
 import { LoginDBStrategy } from "../examples/auth/loginDBStrategy";
 import { LoginGoogleStrategy } from "../examples/auth/loginGoogleStrategy";
