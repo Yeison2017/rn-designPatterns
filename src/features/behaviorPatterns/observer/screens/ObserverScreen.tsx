@@ -7,22 +7,19 @@ import { DESCRIPTION_DESIGN_PATTERNS } from "@/data";
 import { IMAGE_EXAMPLE, IMAGE_PROPORTION } from "@/common/constants";
 import { StackAppProps } from "@/navigation/interfaces";
 
-const SingletonScreen = () => {
+const ObserverScreen = () => {
   const navegation = useNavigation<StackAppProps>();
 
   return (
     <ScreenLayout>
       <TitleAccordion name="Descripción">
-        <Paragraph name={DESCRIPTION_DESIGN_PATTERNS.singleton} />
+        <Paragraph name={DESCRIPTION_DESIGN_PATTERNS.observer} />
       </TitleAccordion>
-
       <TitleAccordion name="Ejemplos:">
         <InfoCard
-          title="Servicio de Registro de Usuario"
-          image={IMAGE_EXAMPLE.userRegistrationServiceSingleton}
-          onPress={() =>
-            navegation.navigate("UserRegistrationServiceSingleton")
-          }
+          title="YouTube"
+          image={IMAGE_EXAMPLE.youTubeObserver}
+          onPress={() => navegation.navigate("YouTubeObserver")}
           imageProportion={IMAGE_PROPORTION}
         />
       </TitleAccordion>
@@ -30,6 +27,6 @@ const SingletonScreen = () => {
   );
 };
 
-export default SingletonScreen;
+export default ObserverScreen;
 
 const styles = StyleSheet.create({});

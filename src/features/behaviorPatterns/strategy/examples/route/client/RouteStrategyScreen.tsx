@@ -14,12 +14,6 @@ import { TitleAccordion } from "@/common/components/accordion";
 import { CodeSyntax } from "@/common/components/codeSyntax";
 import { CODE_ROUTE_STRATEGY } from "@/data/code";
 
-const items = [
-  { label: "En automóvil", value: "road" },
-  { label: "A pie", value: "walking" },
-  { label: "Transporte público", value: "publicTransport" },
-];
-
 const RouteStrategyScreen = () => {
   const [selectedValue, setSelectedValue] = useState("");
   const [textOrigen, setTextOrigen] = useState("");
@@ -74,7 +68,7 @@ const RouteStrategyScreen = () => {
       <TitleAccordion name="Ejemplo:">
         <Picker
           title="Medio de transporte:"
-          items={items}
+          items={data.items}
           selectedValue={selectedValue}
           onValueChange={onSelectedValue}
         />

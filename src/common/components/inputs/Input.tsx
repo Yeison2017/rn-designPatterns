@@ -1,17 +1,17 @@
 import { View, TextInput, StyleSheet, Text } from "react-native";
 
-import { borderRadius, colors } from "@/common/styles";
+import { borderRadius, colors, fontSize } from "@/common/styles";
 
 interface Props {
   title?: string;
-  value: string;
+  value?: string;
   onChangeText: (text: string) => void;
   placeholder?: string;
 }
 
 const Input = ({ title, onChangeText, value = "", placeholder }: Props) => {
   return (
-    <View>
+    <View style={styles.container}>
       {title && <Text style={styles.label}>{title}</Text>}
 
       <TextInput
@@ -25,8 +25,11 @@ const Input = ({ title, onChangeText, value = "", placeholder }: Props) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   label: {
-    fontSize: 18,
+    fontSize: fontSize.lg,
     marginBottom: 8,
   },
   input: {
@@ -35,7 +38,6 @@ const styles = StyleSheet.create({
     borderColor: colors.trueGray300,
     borderWidth: 1,
     paddingHorizontal: 8,
-    marginBottom: 16,
   },
 });
 

@@ -63,6 +63,7 @@ class DesignPatternsController {
   ): keyof RootStackAppParams {
     if (designPatterns === DESIGN_PATTERNS.singleton) return "Singleton";
     if (designPatterns === DESIGN_PATTERNS.strategy) return "Strategy";
+    if (designPatterns === DESIGN_PATTERNS.observer) return "Observer";
 
     return "Singleton";
   }
