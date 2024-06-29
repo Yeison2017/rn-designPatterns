@@ -16,6 +16,11 @@ export type RootStackAppParams = {
   Strategy: undefined;
 
   // ---------------- EXAMPLES ----------------
+  // ---------- Creational patterns ----------
+  // Singleton
+  UserRegistrationServiceSingleton: undefined;
+  ProfileUserRegistration: undefined;
+
   // ---------- Behavior patterns ----------
   // Strategy
   RouteStrategy: undefined;

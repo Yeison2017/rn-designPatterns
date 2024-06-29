@@ -9,6 +9,10 @@ import { RouteStrategyScreen } from "@/features/behaviorPatterns/strategy/exampl
 import { RootStackAppParams } from "../interfaces";
 import { ObserverScreen } from "@/features/behaviorPatterns/observer/screens";
 import { YouTubeObserverScreen } from "@/features/behaviorPatterns/observer/examples/youTube/client";
+import {
+  ProfileUserRegistrationScreen,
+  UserRegistrationServiceSingletonScreen,
+} from "@/features/creationalPatterns/singleton/examples/userRegistrationService/client";
 
 const Stack = createNativeStackNavigator<RootStackAppParams>();
 
@@ -36,6 +40,17 @@ const StackApp = () => {
       <Stack.Screen name="Strategy" component={StrategyScreen} />
 
       {/* ---------------------- EXAMPLES ---------------------- */}
+
+      {/* -------- Creational patterns -------- */}
+      {/* Singleton */}
+      <Stack.Screen
+        name="UserRegistrationServiceSingleton"
+        component={UserRegistrationServiceSingletonScreen}
+      />
+      <Stack.Screen
+        name="ProfileUserRegistration"
+        component={ProfileUserRegistrationScreen}
+      />
 
       {/* -------- Behavior patterns -------- */}
       {/* Strategy */}

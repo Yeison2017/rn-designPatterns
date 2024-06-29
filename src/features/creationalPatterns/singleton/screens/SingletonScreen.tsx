@@ -1,20 +1,31 @@
 import { StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-import { Paragraph, ScreenLayout, Title } from "@/common/components";
-import RandomSingleton from "../examples/randomSingleton";
-import DataBaseSingleton from "../examples/dataBaseSingleton";
+import { InfoCard, Paragraph, ScreenLayout } from "@/common/components";
+import { TitleAccordion } from "@/common/components/accordion";
+import { DESCRIPTION_DESIGN_PATTERNS } from "@/data";
+import { IMAGE_EXAMPLE, IMAGE_PROPORTION } from "@/common/constants";
+import { StackAppProps } from "@/navigation/interfaces";
 
 const SingletonScreen = () => {
-  const randomSingleton = RandomSingleton.getInstance();
-  const dataBaseSingleton = DataBaseSingleton.getInstance();
+  const navegation = useNavigation<StackAppProps>();
 
   return (
     <ScreenLayout>
-      <Title name="Ejemplos:" />
-      <Title name="1. Número ramdon" />
-      <Paragraph name={randomSingleton.random} />
-      <Title name="2. Base de datos" />
-      <Paragraph name={dataBaseSingleton.query("SELECT * FROM users")} />
+      <TitleAccordion name="Descripción">
+        <Paragraph name={DESCRIPTION_DESIGN_PATTERNS.singleton} />
+      </TitleAccordion>
+
+      <TitleAccordion name="Ejemplos:">
+        <InfoCard
+          title="Servicio de Registro de Usuario"
+          image={IMAGE_EXAMPLE.userRegistrationServiceSingleton}
+          onPress={() =>
+            navegation.navigate("UserRegistrationServiceSingleton")
+          }
+          imageProportion={IMAGE_PROPORTION}
+        />
+      </TitleAccordion>
     </ScreenLayout>
   );
 };

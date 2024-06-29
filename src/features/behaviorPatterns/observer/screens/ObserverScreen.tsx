@@ -4,10 +4,8 @@ import { useNavigation } from "@react-navigation/native";
 import { InfoCard, Paragraph, ScreenLayout } from "@/common/components";
 import { TitleAccordion } from "@/common/components/accordion";
 import { DESCRIPTION_DESIGN_PATTERNS } from "@/data";
-import { IMAGE_EXAMPLE } from "@/common/constants";
+import { IMAGE_EXAMPLE, IMAGE_PROPORTION } from "@/common/constants";
 import { StackAppProps } from "@/navigation/interfaces";
-
-const imageProportion = 0.2;
 
 const ObserverScreen = () => {
   const navegation = useNavigation<StackAppProps>();
@@ -22,7 +20,7 @@ const ObserverScreen = () => {
           title="YouTube"
           image={IMAGE_EXAMPLE.youTubeObserver}
           onPress={() => navegation.navigate("YouTubeObserver")}
-          imageProportion={imageProportion}
+          imageProportion={IMAGE_PROPORTION}
         />
       </TitleAccordion>
     </ScreenLayout>

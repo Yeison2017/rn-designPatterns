@@ -1,6 +1,6 @@
 import { View, TextInput, StyleSheet, Text } from "react-native";
 
-import { borderRadius, colors } from "@/common/styles";
+import { borderRadius, colors, fontSize } from "@/common/styles";
 
 interface Props {
   title?: string;
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   label: {
-    fontSize: 18,
+    fontSize: fontSize.lg,
     marginBottom: 8,
   },
   input: {
