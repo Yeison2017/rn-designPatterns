@@ -46,3 +46,33 @@ export const IMAGE_EXAMPLE = {
   userRegistrationServiceSingleton:
     "https://img.icons8.com/?size=100&id=47691&format=png&color=000000",
 };
+
+export const IMAGE_STRUCTURE = {
+  // Creational patterns
+  // factoryMethod: require("../../../assets/images/factoryMethod.png"),
+  // abstractFactory: require("../../../assets/images/abstractFactory.png"),
+  // builder: require("../../../assets/images/builder.png"),
+  // prototype: require("../../../assets/images/prototype.png"),
+  singleton: require("../../../assets/images/structure/singleton.png"),
+
+  // Structural patterns
+  // adapter: require("../../../assets/images/adapter.png"),
+  // bridge: require("../../../assets/images/bridge.png"),
+  // composite: require("../../../assets/images/composite.png"),
+  // decorator: require("../../../assets/images/decorator.png"),
+  // facade: require("../../../assets/images/facade.png"),
+  // flyweight: require("../../../assets/images/flyweight.png"),
+  // proxy: require("../../../assets/images/proxy.png"),
+
+  // Behavior patterns
+  // chainOfResponsibility: require("../../../assets/images/chainOfResponsibility.png"),
+  // command: require("../../../assets/images/command.png"),
+  // iterator: require("../../../assets/images/iterator.png"),
+  // mediator: require("../../../assets/images/mediator.png"),
+  // memento: require("../../../assets/images/memento.png"),
+  observer: require("../../../assets/images/observer.png"),
+  // state: require("../../../assets/images/state.png"),
+  strategy: require("../../../assets/images/strategy.png"),
+  // templateMethod: require("../../../assets/images/templateMethod.png"),
+  // visitor: require("../../../assets/images/visitor.png"),
+};

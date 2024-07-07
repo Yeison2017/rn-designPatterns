@@ -1,10 +1,19 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { InfoCard, Paragraph, ScreenLayout } from "@/common/components";
+import {
+  ImageModal,
+  InfoCard,
+  Paragraph,
+  ScreenLayout,
+} from "@/common/components";
 import { TitleAccordion } from "@/common/components/accordion";
 import { DESCRIPTION_DESIGN_PATTERNS } from "@/data";
-import { IMAGE_EXAMPLE, IMAGE_PROPORTION } from "@/common/constants";
+import {
+  IMAGE_EXAMPLE,
+  IMAGE_PROPORTION,
+  IMAGE_STRUCTURE,
+} from "@/common/constants";
 import { StackAppProps } from "@/navigation/interfaces";
 
 const SingletonScreen = () => {
@@ -14,6 +23,10 @@ const SingletonScreen = () => {
     <ScreenLayout>
       <TitleAccordion name="Descripción">
         <Paragraph name={DESCRIPTION_DESIGN_PATTERNS.singleton} />
+      </TitleAccordion>
+
+      <TitleAccordion name="Estructura">
+        <ImageModal source={IMAGE_STRUCTURE.singleton} />
       </TitleAccordion>
 
       <TitleAccordion name="Ejemplos:">
