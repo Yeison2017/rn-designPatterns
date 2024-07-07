@@ -72,7 +72,7 @@ export const IMAGE_STRUCTURE = {
   // memento: require("../../../assets/images/memento.png"),
   observer: require("../../../assets/images/observer.png"),
   // state: require("../../../assets/images/state.png"),
-  strategy: require("../../../assets/images/strategy.png"),
+  strategy: require("../../../assets/images/structure/strategy.png"),
   // templateMethod: require("../../../assets/images/templateMethod.png"),
   // visitor: require("../../../assets/images/visitor.png"),
 };
