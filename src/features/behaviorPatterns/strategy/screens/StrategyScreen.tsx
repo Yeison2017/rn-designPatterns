@@ -28,6 +28,12 @@ const StrategyScreen = () => {
           onPress={() => navegation.navigate("RouteStrategy")}
           imageProportion={0.2}
         />
+        <InfoCard
+          title="Calcular descuento"
+          image={IMAGE_EXAMPLE.discountStrategy}
+          onPress={() => navegation.navigate("DiscountStrategy")}
+          imageProportion={0.2}
+        />
       </TitleAccordion>
     </ScreenLayout>
   );

@@ -13,6 +13,7 @@ import {
   ProfileUserRegistrationScreen,
   UserRegistrationServiceSingletonScreen,
 } from "@/features/creationalPatterns/singleton/examples/userRegistrationService/client";
+import { DiscountStrategyScreen } from "@/features/behaviorPatterns/strategy/examples/discount/client";
 
 const Stack = createNativeStackNavigator<RootStackAppParams>();
 
@@ -55,6 +56,10 @@ const StackApp = () => {
       {/* -------- Behavior patterns -------- */}
       {/* Strategy */}
       <Stack.Screen name="RouteStrategy" component={RouteStrategyScreen} />
+      <Stack.Screen
+        name="DiscountStrategy"
+        component={DiscountStrategyScreen}
+      />
 
       {/* Observer */}
       <Stack.Screen name="YouTubeObserver" component={YouTubeObserverScreen} />

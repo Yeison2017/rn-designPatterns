@@ -24,6 +24,7 @@ export type RootStackAppParams = {
   // ---------- Behavior patterns ----------
   // Strategy
   RouteStrategy: undefined;
+  DiscountStrategy: undefined;
 
   // Observer
   YouTubeObserver: undefined;

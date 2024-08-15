@@ -18,6 +18,7 @@ const TitleAccordion = ({ children, ...props }: Props) => {
       <TouchableOpacity
         onPress={() => setShowChildren(!showChildren)}
         style={styles.touchableOpacity}
+        activeOpacity={0.8}
       >
         <Title {...props} />
         <Icon

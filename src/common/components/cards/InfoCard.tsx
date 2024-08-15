@@ -25,7 +25,11 @@ const InfoCard = ({
   onPress,
 }: Props) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles().card}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={styles().card}
+      activeOpacity={0.8}
+    >
       <View style={styles().container}>
         <View style={styles().header}>
           <View style={styles().iconContainer}>

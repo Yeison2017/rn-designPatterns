@@ -42,7 +42,11 @@ export const IMAGE: { [key in PatternKeys]: ImageSourcePropType } = {
 
 export const IMAGE_EXAMPLE = {
   routeStrategy: "https://cdn-icons-png.flaticon.com/128/9245/9245193.png",
+  discountStrategy:
+    "https://img.icons8.com/?size=100&id=4D03x5tNX9Sw&format=png&color=000000",
+
   youTubeObserver: "https://img.icons8.com/?size=100&id=25461&format=png",
+
   userRegistrationServiceSingleton:
     "https://img.icons8.com/?size=100&id=47691&format=png&color=000000",
 };
